@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: DEMO_SERVERS
   vars:
     java_packages:
       - java-17-amazon-corretto-devel
