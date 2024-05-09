@@ -55,6 +55,7 @@
           - docker
         state: present
     - name: Enable the docker service
+      become: true
       systemd:
         name: docker
         enabled: yes
