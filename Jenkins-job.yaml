@@ -1,0 +1,11 @@
+- name: trigger jenkins job
+  hosts: all
+  vars:
+    Hhost: "3.84.238.74:8080"
+    User: "raghu"
+    Password: "raghu"
+    project: "demo"
+    Token: "12345"
+  tasks:
+    - name: Queue build of a project in Jenkins
+      shell: 'curl http://{{ Hhost }}/job/{{ project }}/build\?token\={{ Token }} -u {{ User }}:{{ Password }}'
